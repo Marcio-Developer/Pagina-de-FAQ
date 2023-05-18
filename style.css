@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0 320px;
+    padding-top: 160px;
+    background-color: #dad9d9;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(49, 49, 49);
+    margin-bottom: 10px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: blue;
+    cursor: pointer;
+    padding: 18px;
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.active,
+.accordion:hover {
+    background-color: white;
+    border: 1px solid blue;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: blue;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: rgb(222, 242, 255);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel p{
+    text-align: justify;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px){
+    h2{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    body {
+        padding: 0 10px;
+        padding-top: 130px;
+    }
+
+    .accordion {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
